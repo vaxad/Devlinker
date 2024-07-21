@@ -1,0 +1,65 @@
+[
+  {
+    "name": "What is Backend Testing?",
+    "description": "This platform gives an overview of what Backend testing exactly is and what are its types, advantages and disadvantages. ",
+    "url": "https://www.geeksforgeeks.org/what-is-backend-testing/",
+    "category": "backend",
+    "subcategory": "testing"
+  },
+  {
+    "name": "Toad by Quest",
+    "description": "It provides a development environment with hooks into Oracle's debugger and code profiler. It provides DBA utilities such as SGA tracing and system monitoring. It provides useful utilities such as ftp and telnet so that you don't have to leave your development environment to manage files. It can monitor your database or server and send you email alerts if things go wrong.",
+    "url": "https://www.quest.com/toad/",
+    "category": "backend",
+    "subcategory": "testing"
+  },
+  {
+    "name": "phpMyAdmin",
+    "description": "It's a free and open source administration tool for MySQL and MariaDB. As a portable web application written primarily in PHP, it has become one of the most popular MySQL administration tools, especially for web hosting services.",
+    "url": "https://www.phpmyadmin.net/",
+    "category": "backend",
+    "subcategory": "testing"
+  },
+  {
+    "name": "Mongo Orchestration by MongoDB",
+    "description": "Simplify MongoDB Testing with Mongo Orchestration. Mongo Orchestration is an HTTP server providing a RESTful interface to MongoDB process management running on the same machine.",
+    "url": "https://www.mongodb.com/blog/post/simplifying-mongodb-testing-mongo-orchestration",
+    "category": "backend",
+    "subcategory": "testing"
+  },
+  {
+    "name": "Postman",
+    "description": "Postman is a popular API testing tool that simplifies the process of sending HTTP requests to test and analyze web services. It allows developers to create, organize, and automate API tests, making it a valuable tool for ensuring the functionality and reliability of web applications.",
+    "url": "https://www.postman.com/",
+    "category": "backend",
+    "subcategory": "testing"
+  },
+  {
+    "name": "cypress",
+    "description": "Cypress is an end-to-end testing framework for JavaScript applications. It runs in the browser and provides a simple, yet powerful API for writing and running tests. Cypress is a good choice for teams that need to test their JavaScript applications quickly and easily.",
+    "url": "https://www.cypress.io/",
+    "category": "backend",
+    "subcategory": "testing"
+  },
+  {
+    "name": "Hoppscotch",
+    "description": "Hoppscotch is a lightweight, web-based API development suite. It was built from the ground up with ease of use and accessibility in mind providing all the functionality needed for API developers with minimalist, unobtrusive UI.",
+    "url": "https://docs.hoppscotch.io/",
+    "category": "backend",
+    "subcategory": "testing"
+  },
+  {
+    "name": "Playwright",
+    "description": "Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API.",
+    "url": "https://playwright.dev/",
+    "category": "backend",
+    "subcategory": "testing"
+  },
+  {
+    "name": "Yaak",
+    "description": "Yaak is a cross-platform desktop app for interacting with REST, GraphQL, and gRPC an open-source Postman alternative.",
+    "url": "https://yaak.app/",
+    "category": "backend",
+    "subcategory": "testing"
+  }
+]

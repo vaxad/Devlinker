@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Angular Official",
+    "description": "Angular latest official documentation, tutorials, and playgrounds",
+    "url": "https://angular.dev",
+    "category": "frontend",
+    "subcategory": "angular",
+    "language": "english"
+  },
+  {
+    "name": "NgRx",
+    "description": "Reactive State Management for Angular",
+    "url": "https://ngrx.io/guide/store",
+    "category": "frontend",
+    "subcategory": "angular",
+    "language": "english"
+  },
+  {
+    "name": "Angular Material",
+    "description": "Material Design components for Angular",
+    "url": "https://material.angular.io/",
+    "category": "frontend",
+    "subcategory": "angular",
+    "language": "english"
+  },
+  {
+    "name": "Angular Challenges",
+    "description": "Practice Angular by completing challenges",
+    "url": "https://angular-challenges.vercel.app/guides/getting-started/",
+    "category": "frontend",
+    "subcategory": "angular",
+    "language": "english"
+  },
+  {
+    "name": "Angular 12 in Hindi Tutorial",
+    "description": "Learn Angular in Hindi with step-by-step guide and build amazing projects.",
+    "url": "https://www.youtube.com/watch?v=PSRhmtiRNm4&list=PL8p2I9GklV45--5t7_N4lveUI6Y31vQ6C",
+    "category": "frontend",
+    "subcategory": "angular",
+    "language": "english"
+  },
+  {
+    "name": "Angular 17",
+    "description": "Get started with Angular 17, and make amazing projects",
+    "url": "https://v17.angular.io/start",
+    "category": "frontend",
+    "subcategory": "angular",
+    "language": "english"
+  }
+]

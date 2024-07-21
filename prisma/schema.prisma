@@ -1,0 +1,67 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Resource {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  clicks      Int
+  createdAt   DateTime @db.Date
+  description String
+  name        String
+  url         String
+  approved    Boolean
+  upvotes     Int
+  downvotes   Int
+  request     ResourceRequest?
+  category    Category @relation(fields: [categoryId], references: [id])
+  categoryId  String @db.ObjectId
+  subCategory SubCategory @relation(fields: [subCategoryId], references: [id])
+  subCategoryId String @db.ObjectId
+}
+
+model ResourceRequest {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt DateTime @db.Date
+  email     String
+  name     String
+  github    String?
+  resource Resource @relation(fields: [resourceId], references: [id])
+  resourceId String @unique @db.ObjectId
+}
+
+model Category {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  name String
+  description String
+  createdAt DateTime @db.Date
+  approved Boolean
+  resources Resource[]
+  subCategories SubCategory[]
+  request CategoryRequest?
+}
+
+model CategoryRequest {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt DateTime @db.Date
+  email     String
+  name     String
+  github    String?
+  category Category @relation(fields: [categoryId], references: [id])
+  categoryId String @unique @db.ObjectId
+}
+
+model SubCategory{
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  name String
+  description String
+  createdAt DateTime @db.Date
+  approved Boolean
+  category Category @relation(fields: [categoryId], references: [id])
+  categoryId String @db.ObjectId
+  resources Resource[]
+}

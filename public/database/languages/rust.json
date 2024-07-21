@@ -1,0 +1,51 @@
+[
+    {
+        "name": "Learn Rust Programming - Official Docs ",
+        "description": "Rust is a multi-paradigm, general-purpose programming language that highlights performance, type safety, and concurrency. It enforces memory-safety, ensuring that all references point to valid memory—without requiring the use of a garbage collector or reference counting present in other memory-safe languages",
+        "url": "https://www.rust-lang.org/learn/get-started",
+        "category": "languages",
+        "subcategory": "rust"
+    },
+    {
+        "name": "Learn Rust Programming - Complete Course ",
+        "description": "In this beginner-level course, you will learn about the core concepts of Rust and underlying mechanisms in theory about the programming language",
+        "url": "https://www.youtube.com/watch?v=BpPEoZW5IiY",
+        "category": "languages",
+        "subcategory": "rust"
+    },
+    {
+        "name": "Rust Axum Full Course - Web Development",
+        "description": "Rust Programming - Full Course for Axum: An Awesome Web Framework for Rust. Not too low-level, not too high-level, well-componentized, complete, and with great ergonomics.",
+        "url": "https://www.youtube.com/watch?v=XZtlD_m59sM",
+        "category": "languages",
+        "subcategory": "rust"
+    },
+    {
+      "name": "Rustlings",
+      "description": "Rustlings is a collection of small exercises that get you used to reading and writing in Rust. This includes reading and responding to compiler messages!",
+      "url": "https://rustlings.cool",
+      "category": "languages",
+      "subcategory": "rust"
+    },
+    {
+        "name": "Rust Bevy - Game Engine",
+        "description": "Master Rust game development with Bevy's high-performance, ergonomic framework. Learn from setup to advanced techniques for creating immersive gaming experiences.",
+        "url": "https://bevyengine.org/learn/quick-start/getting-started/",
+        "category": "languages",
+        "subcategory": "rust"
+    },
+    {
+        "name": "Rust actix - Web Framework",
+        "description": "Unlock the power of Rust web development with Actix Web's high-performance, asynchronous framework. From setup to advanced techniques, create robust and scalable web applications with ease.",
+        "url": "https://actix.rs",
+        "category": "languages",
+        "subcategory": "rust"
+    },
+    {
+        "name": "Rust Infinity",
+        "description": "Your journey to becoming a Rust developer starts here. Learn Rust with interactive problems, integrated compiler, and a supportive community.",
+        "url": "https://www.rustfinity.com",
+        "category": "languages",
+        "subcategory": "rust"
+    }
+]

@@ -1,0 +1,135 @@
+[
+  {
+    "name": "VSCodium",
+    "description": "VSCodium is free/libre Open Source Software Binaries of VS Code.",
+    "url": "https://github.com/VSCodium/vscodium",
+    "category": "other",
+    "subcategory": "devtools"
+  },
+  {
+    "name": "Mockaroo",
+    "description": "This site will help you to generate mock data for your projects",
+    "url": "https://www.mockaroo.com/",
+    "category": "other",
+    "subcategory": "devtools"
+  },
+  {
+    "name": "Swagger",
+    "description": "This site will help you to create documentation for your APIs",
+    "url": "https://swagger.io/",
+    "category": "other",
+    "subcategory": "devtools"
+  },
+  {
+    "name": "UX-Archive",
+    "description": "UX-Archive is powered by Waldo, the world’s first no-code testing platform that lets anyone create reliable, automated mobile tests without the hassle of scripting",
+    "url": "https://uxarchive.com/",
+    "category": "other",
+    "subcategory": "devtools"
+  },
+  {
+    "name": "CodeSandbox",
+    "description": "This IDE will make it easier for you to code. You can get any design you want as well as filter it by framework,dependencies, and tags.",
+    "url": "https://codesandbox.io/search?refinementList",
+    "category": "other",
+    "subcategory": "devtools"
+  },
+  {
+    "name": "OpenSauced",
+    "description": "OpenSauced is a great tool to display your merged and opened pull requests, highlight your favorite contributions, and find other open-source projects to contribute to!",
+    "url": "https://opensauced.pizza/",
+    "category": "other",
+    "subcategory": "devtools"
+  },
+  {
+    "name": "CodeCraftes",
+    "description": "This is one of the best websites for developers to learn different programming languages. It provides dedicated tracks for each language and an online IDE that lets you do the exercises as you watch the lessons.",
+    "url": "https://app.codecrafters.io/tracks",
+    "category": "other",
+    "subcategory": "devtools"
+  },
+  {
+    "name": "Deepsource",
+    "description": "Deepsource is a game-changer for maintaining secure and high-quality code. With its proactive static analysis, developers, security teams, and engineering leaders can address code issues and improve code coverage, leading to the faster merging of pull requests and enhanced codebase stability.",
+    "url": "https://deepsource.com/",
+    "category": "other",
+    "subcategory": "devtools"
+  },
+  {
+    "name": "AI search engine for developers",
+    "description": "Phind is a search engine that simply tells users what the answer is. It is optimized for developers and technical questions.",
+    "url": "https://www.phind.com/",
+    "category": "other",
+    "subcategory": "devtools"
+  },
+  {
+    "name": "SmallDevTools",
+    "description": "This website has a collection of useful tools for developers in a minimal UI.",
+    "url": "https://smalldev.tools/",
+    "category": "other",
+    "subcategory": "devtools"
+  },
+  {
+    "name": "Devhints",
+    "description": "This website has over 358 curated cheatsheets, by developers for developers.",
+    "url": "https://devhints.io/",
+    "category": "other",
+    "subcategory": "devtools"
+  },
+  {
+    "name": "Killercoda",
+    "description": "Killercoda is a place where you open your browser and get instant access to a real Linux or Kubernetes environment ready to use.",
+    "url": "https://killercoda.com/",
+    "category": "other",
+    "subcategory": "devtools"
+  },
+  {
+    "name": "Compress jpeg",
+    "description": "This website will help you to compress your jpeg images.",
+    "url": "https://compressjpeg.com/",
+    "category": "other",
+    "subcategory": "devtools"
+  },
+  {
+    "name": "Picresize",
+    "description": "This website will help you to resize your images.",
+    "url": "https://picresize.com/",
+    "category": "other",
+    "subcategory": "devtools"
+  },
+  {
+    "name": "Tinypng",
+    "description": "This website will help you to compress your png images.",
+    "url": "https://tinypng.com/",
+    "category": "other",
+    "subcategory": "devtools"
+  },
+  {
+    "name": "Image Compressor",
+    "description": "This website will help you to compress your images.",
+    "url": "https://imagecompressor.com/",
+    "category": "other",
+    "subcategory": "devtools"
+  },
+  {
+    "name": "Dr Link Check",
+    "description": "Dr. Link Check is a valuable tool that helps website owners identify and address broken links on their websites. Broken links can negatively impact user experience, search engine rankings, and overall site credibility.    ",
+    "url": "https://www.drlinkcheck.com/",
+    "category": "other",
+    "subcategory": "devtools"
+  },
+  {
+    "name": "Dracula Theme",
+    "description": "Dracula is a color scheme for code editors and terminal emulators such as Vim, Notepad++, iTerm, VSCode, Terminal.app, ZSH, and much more.",
+    "url": "https://draculatheme.com/",
+    "category": "other",
+    "subcategory": "devtools"
+  },
+  {
+    "name": "Responsively",
+    "description": "A modified web browser that helps in responsive web development. A web developer's must have dev tool.",
+    "url": "https://responsively.app",
+    "category": "other",
+    "subcategory": "devtools"
+  }
+]
