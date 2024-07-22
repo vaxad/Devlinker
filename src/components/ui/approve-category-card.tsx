@@ -1,8 +1,4 @@
 import { Category } from "@prisma/client"
-import { Button } from "./button"
-import { ArrowTopRightIcon } from "@radix-ui/react-icons"
-import SaveButton from "./save-button"
-import CopyButton from "./copy-button"
 import ApproveCategoryButton from "./approve-category-button"
 
 export default function ApproveCategoryCard({ category }: { category: Category }) {

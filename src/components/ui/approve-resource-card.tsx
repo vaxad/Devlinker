@@ -13,10 +13,9 @@ export default function ApproveResourceCard({ resource }: { resource: Resource }
                 <div className="flex items-center gap-4">
                     <ApproveResourceButton id={resource.id} />
                 </div>
-                <a href={resource.url} target="_blank">
-                    <Button title={`Visit ${resource.url}`} className="hover:bg-background group hover:text-foreground border-background border transition-[background-color,color,border-color]">
-                        Visit
-                        <span className="ml-2 group-hover:scale-125 transition-transform">
+                <a href={resource.url} target="_blank" className="w-full">
+                    <Button title={`Visit ${resource.url}`} className="hover:bg-background w-full group hover:text-foreground border-background border transition-[background-color,color,border-color]">
+                        <span className=" group-hover:scale-125 transition-transform">
                             <ArrowTopRightIcon />
                         </span>
                     </Button>

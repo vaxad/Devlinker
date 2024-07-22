@@ -10,15 +10,14 @@ export default function ResourceCard({ resource }: { resource: Resource }) {
         <div className="flex flex-col h-full justify-between flex-grow p-4 rounded-md gap-2 border border-foreground hover:bg-foreground hover:text-background transition-[background-color,color,border-color,transform] ">
             <h2 className="text-lg font-semibold">{resource.name}</h2>
             <p className="text-sm font-light text-ellipsis">{resource.description}</p>
-            <div className="flex items-center justify-between">
-                <div className="flex items-center gap-4">
+            <div className="flex items-center justify-between gap-2">
+                <div className="flex items-center gap-2">
                     <SaveButton id={resource.id} />
                     <CopyButton url={resource.url} />
                 </div>
-                <a href={resource.url} target="_blank">
-                    <Button title={`Visit ${resource.url}`} className="hover:bg-background group hover:text-foreground border-background border transition-[background-color,color,border-color]">
-                        Visit
-                        <span className="ml-2 group-hover:scale-125 transition-transform">
+                <a href={resource.url} target="_blank" className="w-full">
+                    <Button title={`Visit ${resource.url}`} className="hover:bg-background w-full group hover:text-foreground border-background border transition-[background-color,color,border-color]">
+                        <span className=" group-hover:scale-125 transition-transform">
                             <ArrowTopRightIcon />
                         </span>
                     </Button>

@@ -2,7 +2,7 @@ import Link from 'next/link'
 import React from 'react'
 import { ThemeToggle } from '../ui/theme-toggler'
 import { Button } from '../ui/button'
-import { PlusIcon } from '@radix-ui/react-icons'
+import { BookmarkIcon, PlusIcon } from '@radix-ui/react-icons'
 
 export default function Topbar() {
     return (
@@ -16,6 +16,11 @@ export default function Topbar() {
                 <Link href={'/create'}>
                     <Button className='p-1 aspect-square hover:bg-background hover:text-foreground transition-[background-color,color] border border-foreground' title='Add resources'>
                         <PlusIcon className=' w-6 h-6' />
+                    </Button>
+                </Link>
+                <Link href={'/saves'}>
+                    <Button className='p-1 aspect-square hover:bg-background hover:text-foreground transition-[background-color,color] border border-foreground' title='Add resources'>
+                        <BookmarkIcon className=' w-6 h-6' />
                     </Button>
                 </Link>
                 <ThemeToggle />

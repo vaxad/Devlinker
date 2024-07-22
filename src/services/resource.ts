@@ -154,3 +154,15 @@ export async function getUnapprovedResources(): Promise<Resource[]> {
         return []
     }
 }
+
+export async function getResourcesByIds({ ids }: { ids: string[] }): Promise<Resource[]> {
+    try {
+        const resources = await db.resource.findMany({
+            where: { id: { in: ids } }
+        })
+        return resources
+    } catch (error) {
+        console.error(error);
+        return []
+    }
+}
