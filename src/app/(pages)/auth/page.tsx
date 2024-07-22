@@ -1,9 +1,10 @@
-import { CreateCategoryForm } from "@/components/sections/create-category";
+import { AuthForm } from "@/components/sections/auth-form";
 
 export default function Page() {
     return (
         <div className="flex h-full justify-center items-center">
-            <CreateCategoryForm />
+            <AuthForm />
         </div>
+
     )
 }

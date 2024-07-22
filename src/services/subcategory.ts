@@ -1,3 +1,5 @@
+"use server"
+
 import db from "@/lib/prisma";
 import { CreateSubcategoryData } from "@/lib/types";
 import { SubCategory } from "@prisma/client";

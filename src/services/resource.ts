@@ -1,6 +1,9 @@
+"use server"
+
 import db from "@/lib/prisma";
 import { CreateResourceData, CreateResourceRequestData } from "@/lib/types";
 import { Resource, ResourceRequest } from "@prisma/client";
+import { isLoggedIn } from "./auth";
 
 export async function createResource({ data }: { data: CreateResourceData }): Promise<Resource | null> {
     try {
@@ -50,8 +53,10 @@ export async function createResourceRequest({ data }: { data: CreateResourceRequ
     }
 }
 
-export async function approveResource({ id }: { id: string }): Promise<Resource | null> {
+export async function approveResource({ id, authToken }: { id: string, authToken: string }): Promise<Resource | null> {
     try {
+        const verified = await isLoggedIn({ authToken });
+        if (!verified) return null;
         const resource = await db.resource.update({
             where: { id },
             data: { approved: true }
@@ -130,6 +135,18 @@ export async function getResourcesBySubcategory({ subCategoryId }: { subCategory
     try {
         const resources = await db.resource.findMany({
             where: { subCategoryId, approved: true }
+        })
+        return resources
+    } catch (error) {
+        console.error(error);
+        return []
+    }
+}
+
+export async function getUnapprovedResources(): Promise<Resource[]> {
+    try {
+        const resources = await db.resource.findMany({
+            where: { approved: false }
         })
         return resources
     } catch (error) {

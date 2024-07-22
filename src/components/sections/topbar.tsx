@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import React from 'react'
 import { ThemeToggle } from '../ui/theme-toggler'
+import { Button } from '../ui/button'
+import { PlusIcon } from '@radix-ui/react-icons'
 
 export default function Topbar() {
     return (
@@ -8,9 +10,14 @@ export default function Topbar() {
             <div className='block md:hidden'>
             </div>
             <Link href='/'>
-                <h1 className='text-2xl font-black'>DevLinks</h1>
+                <h1 className='text-2xl font-black'>DevLinker</h1>
             </Link>
             <div className='flex items-center gap-4'>
+                <Link href={'/create'}>
+                    <Button className='p-1 aspect-square hover:bg-background hover:text-foreground transition-[background-color,color] border border-foreground' title='Add resources'>
+                        <PlusIcon className=' w-6 h-6' />
+                    </Button>
+                </Link>
                 <ThemeToggle />
             </div>
         </div>

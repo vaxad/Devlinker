@@ -94,7 +94,7 @@ export const DesktopSidebar = ({
         <>
             <motion.div
                 className={cn(
-                    "h-[calc(100vh-5rem)]  px-4 py-4 hidden  md:flex md:flex-col w-[300px] flex-shrink-0 overflow-hidden",
+                    "h-[calc(100vh-5rem)] z-100  px-4 py-4 hidden z-40 md:flex md:flex-col w-[300px] flex-shrink-0 overflow-hidden",
                     className
                 )}
                 animate={{
@@ -141,7 +141,7 @@ export const MobileSidebar = ({
                                 ease: "easeInOut",
                             }}
                             className={cn(
-                                "fixed h-full w-full inset-0 bg-white dark:bg-neutral-900 p-10 z-[100] flex flex-col justify-between",
+                                "fixed bg-background h-full w-full inset-0 p-10 z-[100] flex flex-col justify-between",
                                 className
                             )}
                         >
@@ -200,13 +200,13 @@ export const SidebarLink = ({
                         </span>
                     </button>
                     <div className={`overflow-hidden flex flex-col ${expanded ? "max-h-screen" : "max-h-0"} h-fit transition-all duration-500`}>
-                        {link.subCategories.map((subCategory) => {
+                        {link.subCategories.map((subCategory, sIdx) => {
                             function handleClick() {
                                 setOpen(false);
                                 router.push(`/subcategory/${subCategory.id}`);
                             }
                             return (
-                                <button onClick={handleClick} key={`subcategory-${link.id}`} className="flex w-full py-2 px-4 rounded-md dark:hover:bg-white dark:hover:text-neutral-700  hover:bg-neutral-700 hover:text-white">
+                                <button onClick={handleClick} key={`subcategory-${link.id}-${sIdx}`} className="flex w-full py-2 px-4 rounded-md dark:hover:bg-white dark:hover:text-neutral-700  hover:bg-neutral-700 hover:text-white">
                                     {subCategory.label}
                                 </button>
                             );

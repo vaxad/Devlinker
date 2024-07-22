@@ -10,17 +10,20 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { CreateCategoryData, CreateResourceRequestData } from "@/lib/types"
+import { CreateSubcategoryData } from "@/lib/types"
 import { useEffect, useState } from "react"
 import { toast } from "../ui/use-toast"
 import { useRouter } from "next/navigation"
-import { createCategory, createCategoryRequest } from "@/services/category"
+import { Category } from "@prisma/client"
+import { createSubcategory } from "@/services/subcategory"
+import SelectComponent from "./select"
 
-export function CreateCategoryForm() {
+export function CreateSubCategoryForm({ categories }: { categories: Category[] }) {
     const router = useRouter();
-    const [categoryData, setCategoryfData] = useState<CreateCategoryData>({
+    const [subCategoryData, setSubCategoryData] = useState<CreateSubcategoryData>({
         description: "",
         name: "",
+        categoryId: ""
     })
 
     function handleNoProfile() {
@@ -44,9 +47,9 @@ export function CreateCategoryForm() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
-    function handleCategoryDataChange(e: React.ChangeEvent<HTMLInputElement>) {
-        setCategoryfData({
-            ...categoryData,
+    function handleSubCategoryDataChange(e: React.ChangeEvent<HTMLInputElement>) {
+        setSubCategoryData({
+            ...subCategoryData,
             [e.target.name]: e.target.value
         })
     }
@@ -62,6 +65,13 @@ export function CreateCategoryForm() {
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
         const storedProfile = localStorage.getItem("devlinker-selfData");
+        if (subCategoryData.categoryId === "") {
+            toast({
+                title: "Error!",
+                description: "Please elect a category first."
+            })
+            return;
+        }
         if (!storedProfile) {
             return handleError();
         }
@@ -69,52 +79,49 @@ export function CreateCategoryForm() {
         if (!storedProfileJson.email || !storedProfileJson.name) {
             return handleError();
         }
-        const res = await createCategory({ data: categoryData });
-        console.log({ categoryData })
+        const res = await createSubcategory({ data: subCategoryData });
         if (!res) {
             return toast({
                 title: "Error!",
-                description: "An error occurred while creating the category."
-            })
-        }
-        const res2 = await createCategoryRequest({
-            data: {
-                name: storedProfileJson.name,
-                email: storedProfileJson.email,
-                categoryId: res.id,
-                github: storedProfileJson.github,
-            }
-        })
-        if (!res2) {
-            return toast({
-                title: "Error!",
-                description: "An error occurred while creating the category request."
+                description: "An error occurred while creating the subcategory."
             })
         }
         toast({
             title: "Success!",
-            description: "Category created successfully."
+            description: "SubCategory created successfully."
         })
-        router.push("/");
+        router.push("/")
     }
 
+    const selectCategoryData = categories.map((item) => ({
+        label: item.name,
+        value: item.id
+    }))
+
     return (
-        <form onSubmit={handleSubmit} className="min-w-[50vh]">
+        <form onSubmit={handleSubmit}>
             <Card className="w-full max-w-sm">
                 <CardHeader>
-                    <CardTitle className="text-2xl">Submit your Category</CardTitle>
+                    <CardTitle className="text-2xl">Submit your SubCategory</CardTitle>
                     <CardDescription>
-                        Enter category details below.
+                        Enter subcategory details below.
                     </CardDescription>
                 </CardHeader>
                 <CardContent className="grid gap-4">
                     <div className="grid gap-2">
                         <Label htmlFor="name">Name</Label>
-                        <Input id="name" type="name" name="name" required placeholder="web dev" value={categoryData.name} onChange={handleCategoryDataChange} />
+                        <Input id="name" type="name" name="name" required placeholder="web dev" value={subCategoryData.name} onChange={handleSubCategoryDataChange} />
                     </div>
                     <div className="grid gap-2">
                         <Label htmlFor="description">Description</Label>
-                        <Input id="description" type="description" name="description" required placeholder="its cool" value={categoryData.description} onChange={handleCategoryDataChange} />
+                        <Input id="description" type="description" name="description" required placeholder="its cool" value={subCategoryData.description} onChange={handleSubCategoryDataChange} />
+                    </div>
+                    <div className="grid gap-2">
+                        <Label htmlFor="category">Category</Label>
+                        <SelectComponent<string> data={selectCategoryData} placeholder="Select a category" value={subCategoryData.categoryId} setValue={(val: string) => setSubCategoryData((prev) => ({
+                            ...prev,
+                            categoryId: val
+                        }))} />
                     </div>
                 </CardContent>
                 <CardFooter>

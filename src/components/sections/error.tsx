@@ -8,7 +8,7 @@ export default function ErrorSection() {
         router.refresh();
     }
     return (
-        <div className="flex justify-center items-center min-h-screen">
+        <div className="flex justify-center items-center  h-[calc(100vh-5rem)]">
             <div className="flex w-fit h-fit flex-col gap-4">
                 <h1 className="text-2xl md:text-4xl lg:6xl font-bold">Oopsie Doopsie!</h1>
                 <p>Some error occurred on the client-side.</p>
