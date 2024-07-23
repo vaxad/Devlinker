@@ -9,7 +9,7 @@ export default function ApproveResourceCard({ resource }: { resource: Resource }
         <div className="flex flex-col h-full justify-between flex-grow p-4 rounded-md gap-2 border border-foreground hover:bg-foreground hover:text-background transition-[background-color,color,border-color,transform] ">
             <h2 className="text-lg font-semibold">{resource.name}</h2>
             <p className="text-sm font-light text-ellipsis">{resource.description}</p>
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between gap-2">
                 <div className="flex items-center gap-4">
                     <ApproveResourceButton id={resource.id} />
                 </div>

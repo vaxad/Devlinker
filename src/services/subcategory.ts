@@ -10,7 +10,7 @@ export async function createSubcategory({ data }: { data: CreateSubcategoryData 
             data: {
                 ...data,
                 createdAt: new Date(),
-                approved: false
+                approved: true          // provision for future admin approval
             }
         })
         return subcategory

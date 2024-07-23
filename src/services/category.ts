@@ -116,7 +116,11 @@ export async function getCategoriesWithSubCategories(): Promise<GetCategoriesWit
             where: { approved: true },
             include: {
                 subCategories: {
-                    where: { approved: true }
+                    where: {
+                        resources: {
+                            some: { approved: true }
+                        }
+                    }
                 }
             }
         })

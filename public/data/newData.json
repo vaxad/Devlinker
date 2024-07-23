@@ -1,3 +1,37 @@
-{
-    "message": "New data here"
-}
+[
+    {
+        "name": "Expo",
+        "url": "https://docs.expo.dev/",
+        "description": "Comprehensive documentation for Expo, a powerful framework that allows developers to build native mobile apps using React. It provides various tools and services to streamline the development process and ensure seamless app deployment across multiple platforms."
+    },
+    {
+        "name": "Eas",
+        "url": "https://expo.dev",
+        "description": "Expo Application Services (EAS) offer a suite of services including build, update, and submit features that simplify and enhance the development lifecycle of Expo projects. EAS enables continuous deployment and seamless updates, making it easier to maintain and distribute applications."
+    },
+    {
+        "name": "NativeWindUI",
+        "url": "https://nativewindui.com/",
+        "description": "NativeWindUI is a utility-first CSS framework designed specifically for React Native. It enables developers to rapidly build responsive and visually appealing user interfaces by using utility classes, streamlining the styling process and ensuring a consistent look and feel across mobile applications."
+    },
+    {
+        "name": "GluestackUI",
+        "url": "https://gluestack.io/",
+        "description": "GluestackUI offers a flexible and customizable component library for React and React Native, allowing developers to create intuitive and engaging user interfaces. It provides a range of pre-built components and styling options that can be tailored to fit the specific needs of any project."
+    },
+    {
+        "name": "TamagUI",
+        "url": "https://tamagui.dev/",
+        "description": "TamagUI is a robust style system and component library optimized for both React Native and Web applications. It focuses on performance and flexibility, providing a seamless experience for developers looking to create visually consistent and highly performant user interfaces across different platforms."
+    },
+    {
+        "name": "RN-Filament(3D)",
+        "url": "https://github.com/margelo/react-native-filament",
+        "description": "RN-Filament is a 3D rendering engine for React Native that leverages Google's Filament project. It enables developers to integrate high-quality 3D graphics into their mobile applications, offering advanced rendering capabilities and a rich set of features for creating immersive visual experiences."
+    },
+    {
+        "name": "Expo Notifications",
+        "url": "https://docs.expo.dev/versions/latest/sdk/notifications/",
+        "description": "The Expo Notifications module provides detailed documentation and tools for handling push notifications within Expo projects. It covers a range of features including scheduling, sending, and receiving notifications, ensuring developers can implement effective and reliable notification systems in their apps."
+    }
+]

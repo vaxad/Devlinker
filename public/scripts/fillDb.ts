@@ -1,3 +1,4 @@
+/*
 const { Category, Resource, SubCategory, PrismaClient } = require("@prisma/client");
 const fs = require('fs');
 const path = require('path');
@@ -89,3 +90,5 @@ main()
     .finally(async () => {
         await prisma.$disconnect();
     });
+
+    */
