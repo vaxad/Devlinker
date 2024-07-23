@@ -9,16 +9,16 @@ import ErrorSection from "@/components/sections/error";
 import { SidebarSection } from "@/components/sections/sidebar";
 import { Toaster } from "@/components/ui/toaster"
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { metadata as defaultMetadata } from "../../public/data/metadata";
 
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
 })
 
-export const metadata: Metadata = {
-  title: "DevLinks",
-  description: "A collection of useful links for developers",
-};
+export const revalidate = 0;
+
+export const metadata: Metadata = defaultMetadata;
 
 export default async function RootLayout({
   children,

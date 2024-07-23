@@ -12,6 +12,7 @@ function CategoryBadge({ item }: { item: Category }) {
   )
 }
 
+export const revalidate = 3600000;
 export default async function Home() {
   const categories = await getCategories();
   return (
